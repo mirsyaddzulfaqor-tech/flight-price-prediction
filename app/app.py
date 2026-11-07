@@ -55,9 +55,8 @@ best = curve.loc[curve["price"].idxmin()]
 
 c1, c2, c3 = st.columns(3)
 c1.metric("Estimated price", f"₹{price:,.0f}")
-c2.metric("Cheapest day to book", f"{int(best.days_left)} days before", f"₹{best.price:,.0f}")
-c3.metric("You could save", f"₹{max(price - best.price, 0):,.0f}",
-          f"{max(price - best.price, 0) / price:.0%} vs your date", delta_color="off")
+c2.metric(f"Cheapest: book {int(best.days_left)} days before", f"₹{best.price:,.0f}")
+c3.metric(f"You could save ({max(price - best.price, 0) / price:.0%})", f"₹{max(price - best.price, 0):,.0f}")
 
 fig = px.line(curve, x="days_left", y="price", markers=True,
               labels={"days_left": "Days before departure", "price": "Estimated price (INR)"},
