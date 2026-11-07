@@ -4,7 +4,7 @@
 
 A gradient boosting model that predicts domestic flight prices with **R² 0.985 and about 12% average error** on 60,000 unseen flights, plus a Streamlit app that estimates a fare and shows the cheapest day to book.
 
-**Live app:** [add link after deploy]
+**Live app:** [irsyad-flight-price.streamlit.app](https://irsyad-flight-price.streamlit.app/)
 
 ![Booking window](images/booking_window.png)
 
